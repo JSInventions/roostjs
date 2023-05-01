@@ -1,0 +1,18 @@
+{
+  "name": "roostjs",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "Roost.js is a library that can convert JHTML (JSON HTML) to HTML!",
+  "main": "roost.min.js",
+  "scripts": {
+    "roost:try": "nodemon host/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "uglify-js": "^3.17.4"
+  }
+}
