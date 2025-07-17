@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.21.2",
+    "express": "^5.0.0",
     "nodemon": "^2.0.22",
     "uglify-js": "^3.17.4"
   }
