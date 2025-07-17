@@ -1,30 +1,34 @@
-import roost from "./roost.js";
+import roost from "./roost.min.js";
 const JHTML = {
-    "doctype": true,
     "lang": "en",
-    "head": {
-        "metaTags": true,
-        "title": "My website",
-        "content":{
-            "link-0": {
-                "ref": "stylesheet",
-                "href": "index.css"
+    "html": {
+        "content": {
+            "head": {
+                "content":{
+                    "title": {
+                        "content":"My website"
+                    },
+                    "link-0": {
+                        "ref": "stylesheet",
+                        "href": "index.css"
+                    },
+                }
             },
-        }
-    },
-    "body": {
-        "div-1": {
-            "id": "nav",
-            "content": {
-                "h1-2": {
-                    "id": "logo",
-                    "content": "Wojtek's website"
+            "body": {
+                "content":{
+                    "div-1": {
+                        "id": "nav",
+                        "content": {
+                            "h1-2": {
+                                "id": "logo",
+                                "content": "Welcome!"
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 }
 
-console.log(
-    roost.compile(JHTML)
-);
+console.log(roost.parse(JHTML));
