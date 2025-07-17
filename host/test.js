@@ -1,6 +1,6 @@
 import express from "express";
 import fs from "fs";
-import roost from "../roost.js";
+import roost from "../roost.min.js";
 
 const app = express();
 
@@ -8,13 +8,19 @@ app.get("/", (req, res) => {
   fs.readFile("./host/index.json", "utf-8", (err, data) => {
     if (err) {
       console.error(err);
-      return res.status(500).send("Error reading index.json");
+      return res.status(500).send(`Error reading index.json\n<code>${err}</code>`);
     }
     res.setHeader('Content-Type', 'text/html');  
-    const jsonData = JSON.parse(data); 
-    const html = roost.compile(jsonData);
-    res.send(html);
-    console.log(html);
+    try {
+      const jsonData = JSON.parse(data); 
+      const html = roost.parse(jsonData);
+      res.send(html);
+      console.log(html);
+    } catch (err) {
+      res.send(`<code>${err}</code>`)
+      console.log(err);
+    }
+
   });
 });
 

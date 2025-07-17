@@ -1,26 +1,28 @@
 {
-    "doctype": true,
     "lang": "en",
-    "stylesheets":[
-        "index.css"
-    ],
-    "head": {
-        "metaTags": true,
-        "title": "My website",
-        "content":{
-            "link-0": {
-                "ref": "stylesheet",
-                "href": "index.css"
-            }
-        }
-    },
-    "body": {
-        "div-1": {
-            "id": "nav",
-            "content": {
-                "h1-2": {
-                    "id": "logo",
-                    "content": "Wojtek's website"
+    "html": {
+        "content": {
+            "head": {
+                "metaTags": true,
+                "content": {
+                    "title": "My website",
+                    "link-0": {
+                        "ref": "stylesheet",
+                        "href": "index.css"
+                    }
+                }
+            },
+            "body": {
+                "content": {
+                    "div-1": {
+                        "id": "nav",
+                        "content": {
+                            "h1-2": {
+                                "id": "logo",
+                                "content": "test site"
+                            }
+                        }
+                    }
                 }
             }
         }
